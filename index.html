@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <title>小蛋蛋闯关</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-mode="title">
+  <canvas id="view" width="960" height="540"></canvas>
+
+  <header id="topbar">
+    <div id="level-name"></div>
+    <div id="star-pill">星星 <b id="star-num">0</b>/<b id="star-den">5</b></div>
+    <button id="mute" type="button" aria-pressed="false">声音 开</button>
+  </header>
+
+  <p id="hint"></p>
+  <div id="toast" aria-live="polite"></div>
+
+  <div id="overlay">
+    <section id="screen-title" class="card">
+      <p class="eyebrow">软软的闯关游戏</p>
+      <h1>小蛋蛋闯关</h1>
+      <p class="subtitle">跳过小沟，捡起星星。慢慢玩就好，掉下去也能再来。</p>
+      <button id="btn-start" class="primary" type="button">开始玩</button>
+      <div id="level-select" hidden></div>
+    </section>
+
+    <section id="screen-clear" class="card" hidden>
+      <h2 id="clear-title">好厉害！</h2>
+      <p id="clear-detail"></p>
+      <button id="btn-next" class="primary" type="button">下一关</button>
+      <div class="row">
+        <button id="btn-retry" class="ghost" type="button">再玩本关</button>
+        <button id="btn-home" class="ghost" type="button">回首页</button>
+      </div>
+    </section>
+
+    <section id="screen-finale" class="card" hidden>
+      <h2>你全部闯过啦！</h2>
+      <p id="finale-stars">一共收集了 0 颗星星</p>
+      <p class="subtitle">看，小蛋蛋高兴得跳起来啦</p>
+      <button id="btn-again" class="primary" type="button">再玩一次</button>
+      <button id="btn-home-2" class="ghost" type="button">回首页</button>
+    </section>
+  </div>
+
+  <div id="controls">
+    <button id="btn-left" type="button">左</button>
+    <button id="btn-jump" type="button">跳</button>
+    <button id="btn-right" type="button">右</button>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
